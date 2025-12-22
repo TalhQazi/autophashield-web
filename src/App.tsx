@@ -29,7 +29,7 @@ function Navbar() {
 				<div className="flex items-center justify-between h-16 sm:h-18">
 					<Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity">
 						<img 
-							src="/images/logo.png" 
+							src="/images/new-logo.png" 
 							alt="AutophaShield Logo" 
 							className="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-lg"
 							onError={(e) => {

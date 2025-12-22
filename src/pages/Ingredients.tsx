@@ -1,4 +1,5 @@
 import Section from '../components/Section'
+import HowToCycleSection from '../components/HowToCycleSection'
 
 export default function Ingredients() {
   return (
@@ -158,6 +159,8 @@ export default function Ingredients() {
           </div>
         </div>
       </Section>
+
+      <HowToCycleSection />
 
       <Section background="muted">
         <div className="max-w-3xl mx-auto text-center">
