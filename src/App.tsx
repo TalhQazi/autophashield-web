@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import Science from './pages/Science'
 import Ingredients from './pages/Ingredients'
@@ -22,24 +23,39 @@ function NavItem({ to, children }: { to: string; children: React.ReactNode }) {
 	)
 }
 
+function ScrollToTop() {
+	const location = useLocation()
+
+	useEffect(() => {
+		window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+	}, [location.pathname])
+
+	return null
+}
+
 function Navbar() {
 	return (
-		<header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+		<header className="fixed top-0 left-0 right-0 z-50 bg-muted/15 backdrop-blur-md border-b border-gray-200 shadow-sm">
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-				<div className="flex items-center justify-between h-16 sm:h-18">
-					<Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity">
-						<img 
-							src="/images/new-logo.png" 
-							alt="AutophaShield Logo" 
-							className="h-8 w-8 sm:h-10 sm:w-10 object-contain rounded-lg"
+				<div className="relative flex items-center justify-center h-14 sm:h-20 md:h-24">
+					{/* Centered logo */}
+					<Link
+						to="/"
+						className="flex items-center justify-center hover:opacity-80 transition-opacity"
+					>
+						<img
+							src="/images/new-logo.png"
+							alt="AutophaShield Logo"
+							className="h-14 w-16 sm:h-20 sm:w-22 md:h-24 md:w-26 object-contain rounded-lg"
 							onError={(e) => {
 								const target = e.target as HTMLImageElement;
 								target.style.display = 'none';
 							}}
 						/>
-						<span className="font-extrabold text-brand-green text-base sm:text-xl tracking-tight">AutophaShield™</span>
 					</Link>
-					<nav className="flex gap-1 text-xs sm:text-sm">
+
+					{/* Nav links aligned to the right */}
+					<nav className="absolute right-0 inset-y-0 flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
 						<NavItem to="/ingredients">Product</NavItem>
 						<NavItem to="/science">Science</NavItem>
 						<NavItem to="/contact">Contact</NavItem>
@@ -80,6 +96,7 @@ function Placeholder({ title }: { title: string }) {
 export default function App() {
 	return (
 		<BrowserRouter>
+			<ScrollToTop />
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
