@@ -1,6 +1,6 @@
 import Section from '../components/Section'
 
-const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgvnzqdp';
 
 export default function Contact() {
   return (
