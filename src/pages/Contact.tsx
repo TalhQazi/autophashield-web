@@ -78,7 +78,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-brand-green mb-2">Send Us a Message</h3>
             <p className="text-gray-600 mb-6">Fill out the form below and we'll get back to you shortly.</p>
             
-            <form className="space-y-5" method="POST" action={FORMSPREE_ENDPOINT || undefined}>
+            <form className="space-y-5" method="POST" action={'https://formspree.io/f/mgvnzqdp' || undefined}>
               <input type="hidden" name="_subject" value="[AutophaShield Contact] New submission" />
               
               <div>
