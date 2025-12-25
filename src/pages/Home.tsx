@@ -3,7 +3,7 @@ import Section from '../components/Section'
 
 export default function Home() {
 	return (
-		<main>
+		<main className="pt-14 sm:pt-20 md:pt-24">
 			<Section>
 				<div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 					<div className="space-y-4 lg:space-y-6">

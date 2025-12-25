@@ -2,7 +2,7 @@ import Section from '../components/Section'
 
 export default function Science() {
   return (
-    <main>
+    <main className="pt-14 sm:pt-20 md:pt-24">
       <Section title="Science Overview">
         <p className="text-center text-lg text-gray-700 max-w-4xl mx-auto mb-12">
           AutophaShield™ activates three key biological pathways that promote longevity and cellular health — without requiring fasting, extreme cold, or heat stress.
@@ -30,9 +30,9 @@ export default function Science() {
                 </p>
               </div>
             </div>
-            <img 
-              src="/images/autophagy.png" 
-              alt="Autophagy Process" 
+            <img
+              src="/images/autophagy.png"
+              alt="Autophagy Process"
               className="w-full h-auto rounded-xl shadow-lg"
             />
           </div>
@@ -57,9 +57,9 @@ export default function Science() {
                 </p>
               </div>
             </div>
-            <img 
-              src="/images/heat-shock-proteins.png" 
-              alt="Heat Shock Proteins Mechanism" 
+            <img
+              src="/images/heat-shock-proteins.png"
+              alt="Heat Shock Proteins Mechanism"
               className="w-full h-auto rounded-xl shadow-lg"
             />
           </div>
@@ -84,9 +84,9 @@ export default function Science() {
                 </p>
               </div>
             </div>
-            <img 
-              src="/images/cold-shock-proteins.png" 
-              alt="Cold Shock Proteins Mechanism" 
+            <img
+              src="/images/cold-shock-proteins.png"
+              alt="Cold Shock Proteins Mechanism"
               className="w-full h-auto rounded-xl shadow-lg"
             />
           </div>

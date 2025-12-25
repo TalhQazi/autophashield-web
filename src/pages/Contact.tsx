@@ -1,10 +1,10 @@
 import Section from '../components/Section'
 
-const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string | undefined
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT
 
 export default function Contact() {
   return (
-    <main>
+    <main className="pt-14 sm:pt-20 md:pt-24">
       <Section title="Get in Touch">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-xl text-gray-700 leading-relaxed">
@@ -25,7 +25,7 @@ export default function Contact() {
                     <p className="text-gray-700">P.O. Box 52, Detroit, ME 04929</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4 p-4 bg-brand-gray rounded-lg">
                   <div className="text-brand-orange text-2xl mt-1">📞</div>
                   <div>
@@ -33,7 +33,7 @@ export default function Contact() {
                     <p className="text-gray-700">(207) 947-1999</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4 p-4 bg-brand-gray rounded-lg">
                   <div className="text-brand-orange text-2xl mt-1">✉️</div>
                   <div>
@@ -77,20 +77,20 @@ export default function Contact() {
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
             <h3 className="text-2xl font-bold text-brand-green mb-2">Send Us a Message</h3>
             <p className="text-gray-600 mb-6">Fill out the form below and we'll get back to you shortly.</p>
-            
-            <form className="space-y-5" method="POST" action={'https://formspree.io/f/mgvnzqdp' || undefined}>
+
+            <form className="space-y-5" method="POST" action={FORMSPREE_ENDPOINT}>
               <input type="hidden" name="_subject" value="[AutophaShield Contact] New submission" />
-              
+
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                   Your Name *
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   id="name"
-                  name="name" 
-                  placeholder="John Doe" 
-                  required 
+                  name="name"
+                  placeholder="John Doe"
+                  required
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all"
                 />
               </div>
@@ -99,12 +99,12 @@ export default function Contact() {
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                   Email Address *
                 </label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   id="email"
-                  name="email" 
-                  placeholder="john@example.com" 
-                  required 
+                  name="email"
+                  placeholder="john@example.com"
+                  required
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all"
                 />
               </div>
@@ -113,11 +113,11 @@ export default function Contact() {
                 <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
                   Your Message *
                 </label>
-                <textarea 
+                <textarea
                   id="message"
-                  name="message" 
-                  placeholder="Tell us about your interest in AutophaShield™..." 
-                  required 
+                  name="message"
+                  placeholder="Tell us about your interest in AutophaShield™..."
+                  required
                   rows={5}
                   className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all resize-none"
                 ></textarea>
@@ -125,10 +125,10 @@ export default function Contact() {
 
               <div className="bg-brand-gray p-4 rounded-lg">
                 <label className="flex items-start gap-3 cursor-pointer">
-                  <input 
-                    type="checkbox" 
-                    name="preorder_interest" 
-                    value="yes" 
+                  <input
+                    type="checkbox"
+                    name="preorder_interest"
+                    value="yes"
                     className="h-5 w-5 mt-0.5 text-brand-orange focus:ring-brand-orange border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">
@@ -138,10 +138,10 @@ export default function Contact() {
               </div>
 
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-              
+
               {FORMSPREE_ENDPOINT ? (
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   formAction={FORMSPREE_ENDPOINT + '?redirect=' + encodeURIComponent('/thank-you')}
                   className="w-full px-8 py-4 rounded-lg bg-brand-orange text-white font-bold text-lg shadow-lg hover:shadow-xl hover:bg-brand-orange/90 transition-all duration-300 transform hover:-translate-y-1"
                 >
@@ -168,14 +168,14 @@ export default function Contact() {
             AutophaShield™ represents a breakthrough in cellular health optimization. Let's discuss how we can work together.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="mailto:nathan@membershipauto.com" 
+            <a
+              href="mailto:nathan@membershipauto.com"
               className="inline-flex items-center px-6 py-3 bg-brand-green text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-brand-green/90 transition-all transform hover:-translate-y-1"
             >
               Email Us Directly
             </a>
-            <a 
-              href="tel:+12079471999" 
+            <a
+              href="tel:+12079471999"
               className="inline-flex items-center px-6 py-3 bg-white border-2 border-brand-green text-brand-green font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-brand-green hover:text-white transition-all transform hover:-translate-y-1"
             >
               Call Us: (207) 947-1999
