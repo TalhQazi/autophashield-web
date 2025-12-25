@@ -3,7 +3,7 @@ import HowToCycleSection from '../components/HowToCycleSection'
 
 export default function Ingredients() {
   return (
-    <main>
+    <main className="pt-14 sm:pt-20 md:pt-24">
       <Section title="Supplement Facts" background="muted">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-xl border-2 border-brand-green/20 overflow-hidden">
@@ -12,7 +12,7 @@ export default function Ingredients() {
               <h3 className="text-2xl font-bold">Supplement Facts</h3>
               <p className="text-sm opacity-90 mt-1">Serving Size: 2 Capsules | Servings Per Container: 30</p>
             </div>
-            
+
             {/* Facts Table */}
             <div className="p-6">
               <table className="w-full text-sm">
@@ -81,14 +81,14 @@ export default function Ingredients() {
                   </tr>
                 </tbody>
               </table>
-              
+
               <div className="mt-6 text-xs text-gray-600 space-y-1">
                 <p>* Percent Daily Values are based on a 2,000 calorie diet.</p>
                 <p>** Daily Value not established.</p>
               </div>
             </div>
           </div>
-          
+
           <div className="mt-6 bg-brand-gray p-6 rounded-lg">
             <p className="text-sm text-gray-700">
               <strong>Other Ingredients:</strong> Vegetable cellulose (capsule), rice flour, magnesium stearate (vegetable source).

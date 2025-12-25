@@ -3,7 +3,7 @@ import Section from '../components/Section'
 
 export default function ThankYou() {
   return (
-    <main>
+    <main className="pt-14 sm:pt-20 md:pt-24">
       <Section>
         <div className="max-w-2xl mx-auto text-center py-12">
           {/* Success Icon */}
@@ -16,7 +16,7 @@ export default function ThankYou() {
           {/* Thank You Message */}
           <h1 className="text-5xl font-black text-brand-green mb-4">Thank You!</h1>
           <p className="text-2xl text-gray-800 font-semibold mb-8">Your message has been received.</p>
-          
+
           {/* Details */}
           <div className="bg-gradient-to-r from-brand-green/5 to-brand-orange/5 border-2 border-brand-green/20 rounded-xl p-8 mb-8">
             <div className="space-y-4 text-left">
@@ -27,7 +27,7 @@ export default function ThankYou() {
                   <p className="text-gray-700">Our team will reply from <strong>nathan@membershipauto.com</strong> within 1–2 business days.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="text-brand-orange text-xl mt-1">📧</div>
                 <div>
@@ -35,7 +35,7 @@ export default function ThankYou() {
                   <p className="text-gray-700">If you don't see our email, please check your spam or promotions folder.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="text-brand-orange text-xl mt-1">🔒</div>
                 <div>
@@ -50,20 +50,20 @@ export default function ThankYou() {
           <div className="space-y-4">
             <p className="text-gray-600 mb-6">While you wait, explore more about AutophaShield™:</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="inline-flex items-center px-6 py-3 bg-brand-green text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-brand-green/90 transition-all transform hover:-translate-y-1"
               >
                 ← Back to Home
               </Link>
-              <Link 
-                to="/science" 
+              <Link
+                to="/science"
                 className="inline-flex items-center px-6 py-3 bg-brand-orange text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-brand-orange/90 transition-all transform hover:-translate-y-1"
               >
                 Explore the Science
               </Link>
-              <Link 
-                to="/ingredients" 
+              <Link
+                to="/ingredients"
                 className="inline-flex items-center px-6 py-3 bg-white border-2 border-brand-green text-brand-green font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-brand-green hover:text-white transition-all transform hover:-translate-y-1"
               >
                 View Ingredients
